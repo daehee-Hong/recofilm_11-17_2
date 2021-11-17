@@ -1,0 +1,28 @@
+#container {
+  width: 800px;
+}
+
+#header {
+  background-color: #e51c23;
+  text-align: center;
+}
+
+#menu {
+  background-color: #ff7997;
+  height: 400px;
+  width: 200px;
+  float: left;
+}
+
+#content {
+  background-color: #fde0dc;
+  height: 400px;
+  width: 600px;
+  float: left;
+}
+
+#footer {
+  background-color: #e84e40;
+  clear: both;
+  text-align: center;
+}

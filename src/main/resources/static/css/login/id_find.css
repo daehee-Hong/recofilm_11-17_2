@@ -1,0 +1,117 @@
+/*기본*/
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c;
+  font-family: 맑은고딕, Malgun Gothic, dotum, gulim, sans-serif;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration:none;
+  color: inherit;
+  background: transparent;
+}
+
+#wrap {
+  width: 100%;
+  height: max-content;
+}
+#content-wrap {
+  width: 100%;
+  margin-bottom: 200px;
+}
+.content-container {
+  width: 90%;
+  overflow:hidden;
+  height: auto;
+  margin: 30px auto;
+  color: #fff;
+}
+
+/*콘텐츠*/
+.wrap_box {
+  width: 1242px;
+  height: 679px;
+  border: solid 1px #9f9f9f;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+/*선택*/
+.select_wrap {
+  width: 491px;
+  height: 73px;
+  margin-bottom: 59px;
+  margin-top: 103px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.select_wrap > div {
+  float: left;
+  font-size: 29px;
+  line-height: 39px;
+  background: transparent;
+  width: 238px;
+  height: 56px;
+}
+.id_find {
+  color: #ffffff;
+  border-bottom: solid 2px #f700ff;
+}
+.pw_find {
+  color: #b4b4b4;
+  border-bottom: solid 2px #ffffff;
+}
+
+/*요구사항*/
+.request_text {
+  color: #c4c4c4;
+  font-size: 20px;
+  margin-bottom: 56px;
+}
+
+/*전화번호 입력*/
+.tel_input {
+  width: 815px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 63px;
+  padding-left: 31px;
+}
+.tel_input::placeholder {
+  color: #000000;
+  font-size: 19px;
+}
+
+/*버튼*/
+.btn_wrap {
+  width: 550px;
+  height: 70px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn_wrap > button {
+  width: 241px;
+  height: 70px;
+  border-radius: 34px;
+  font-size: 23px;
+}
+.btn_cancel {
+  border: solid 2px #a835c6;
+  background: transparent;
+  color: #a835c6;
+  margin-right: 43px;
+}
+.btn_success {
+  border: solid 2px #a835c6;
+  background-color: #a835c6;
+  color: #ffffff;
+}

@@ -1,0 +1,17 @@
+<div class="search_popup" xmlns:th="http://www.thymeleaf.org" th:fragment="popup_search">
+
+    <div class="black_bg"></div>
+
+    <div class="modal_wrap">
+        <div id="modal_close_content">
+            <form th:action="@{search_result}" accept-charset="utf-8" method = "get">
+                <button id="modal_search" type="submit"><img src="./img/search.png"></button>
+                <input type="text" placeholder="검색어 입력" name="keyword">
+            </form>
+            <button class="modal_close"><a href="#"><img src="./img/cencel.png"></a></button>
+        </div>
+    </div>
+
+</div>
+
+

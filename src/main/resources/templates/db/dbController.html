@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>db컨트롤 페이지</title>
+</head>
+<body>
+    <h3>1~20까지의 숫자만 입력(가져오는 page를 db에 저장)</h3>
+    <form th:action="@{saveDB}" method="post">
+        <input type="text" name="page">
+        <input type="submit" value="db에 저장">
+    </form>
+    <form th:action="@{deleteDB}" method="post">
+        <input type="submit" value="db전체삭제">
+    </form>
+
+    <table>
+        <tr>
+            <th class="num"    >ID_PK    </th>
+            <th class="division"  >영화ID    </th>
+            <th class="title" >제목  </th>
+            <th class="writer">포스터</th>
+        </tr>
+        <tr th:each="list, i : ${list}">
+            <td th:text="${list.id}">5</td>
+            <td th:text="${list.movieID}">[자유글]</td>
+            <td th:text="${list.title}">> 영화 추천합니다~!</a></td>
+            <td th:text="${list.poster_path}">asdf</td>
+        </tr>
+    </table>
+</body>
+</html>

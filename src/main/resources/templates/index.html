@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/repeat/header.css">
+	<link rel="stylesheet" href="css/repeat/popup_search.css">
+	<link rel="stylesheet" href="css/slide_json.css"/>
+	<link rel="stylesheet" href="css/repeat/footer.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+	<style type="text/css">
+		.swiper-wrapper {
+			margin-bottom: 40px;
+		}
+
+		.swiper-pagination-bullet {
+			width: 13px;
+			height: 13px;
+			background: #bfbfbf;
+			margin: 0 30px 0 30px;
+		}
+		.swiper-pagination-bullet-active {
+			width: 13px;
+			height: 13px;
+			background: #a835c6;
+			margin: 0 30px 0 30px;
+		}
+
+	</style>
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="banner-wrap">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide" th:if="${i.count <= 9}" th:each="nowPlayingList, i : ${nowPlayingList}"><img src="./img/slide000.jpg" th:src="${nowPlayingList.poster_path}"></div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<!-- Swiper JS -->
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+			<!-- Initialize Swiper -->
+			<script src="js/slide.js"></script>
+        </div>
+		
+        <div id="content-wrap">
+            <div class="content-container">
+				<!--인기영화-->
+            	<h2>뜨끈뜨끈한 <span style="color:red">HOT!</span>한 영화</h2>
+				<div class="content_item" th:if="${i.count <= 5}" th:each="popularList, i : ${popularList}">
+					<ul>
+						<li><a th:href="@{detail(id=${popularList.id})}"><img src="./img/movie007.jpg" th:src="${popularList.poster_path}"></a></li>
+						<li class="content_item_name" th:text="${popularList.title}">존윅</li>
+					</ul>
+				</div>
+
+				<div class="content_clear"></div>
+				<!--출시예정영화-->
+				<h2>출시임박! 출시예정영화</h2>
+				<div class="content_item" th:if="${i.count <= 5}" th:each="upcomingList, i : ${upComingList}">
+					<ul>
+						<li><a th:href="@{detail(id=${upcomingList.id})}"><img src="./img/movie000.jpg" th:src="${upcomingList.poster_path}"></a></li>
+						<li class="content_item_name" th:text="${upcomingList.title}">지하실</li>
+					</ul>
+				</div>
+
+				<div class="content_clear"></div>
+				<!--높은 평가를 받은 영화-->
+				<h2>Top Rated영화!</h2>
+				<div class="content_item" th:if="${i.count <= 5}" th:each="topRatedList, i : ${topRatedList}">
+					<ul>
+						<li><a th:href="@{detail(id=${topRatedList.id})}"><img src="./img/movie001.jpg" th:src="${topRatedList.poster_path}"></a></li>
+						<li class="content_item_name" th:text="${topRatedList.title}">프리가이</li>
+					</ul>
+				</div>
+            </div>
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+		
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

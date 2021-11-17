@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+    <link rel="stylesheet" href="/css/board/board.css">
+	<link rel="stylesheet" href="/css/repeat/header.css">
+	<link rel="stylesheet" href="/css/repeat/footer.css">
+	<link rel="stylesheet" href="/css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="content-wrap">
+			<div class="content-container">
+				<div class="board_title">
+					<h1 id="table_title">recofilm 커뮤니티</h1>
+					<button class="write_btn"><a th:href="@{write}">글쓰기</a></button>
+				</div>
+				<table>
+					<tr>
+						<th class="num"    >번호    </th>
+						<th class="division"  >구분    </th>
+						<th class="title" >제목  </th>
+						<th class="writer">작성자</th>
+						<th class="regtime">등록일</th>
+						<th class="hits">조회수  </th>
+					</tr>
+					<tr>
+						<td>0</td>
+						<td class="import_division"><div>공지</div></td>
+						<td class="import_title"><a href="" class="import_a">게시판을 이용하실 분들</a></td>
+						<td>asdf</td>
+						<td>2021-01-01</td>
+						<td>0</td>
+					</tr>
+					<tr th:each="list, i : ${list}">
+						<td th:text="${list.num}">5</td>
+						<td th:text="${list.write_type}">[자유글]</td>
+						<td><a href="" th:href="@{view(num=${list.num})}" th:text="${list.title}">영화 추천합니다~!</a></td>
+						<td th:text="${list.nickname}">asdf</td>
+						<td th:text="${#temporals.format(list.date, 'yyyy-MM-dd HH:mm')}">2021-01-01</td>
+						<td th:text="${list.view_count}">0</td>
+					</tr>
+				</table>
+				<div class="select_wrap">
+					<select name="select" id="select_box">
+						<option value="제목">제목</option>
+						<option value="작성자">작성자</option>
+					</select>
+					<div class="search_box">
+						<form th:href="@{board}" accept-charset="utf-8" name = "search_info" method = "get">
+							<input type="text" id="search_text" placeholder="검색어를 입력하세요">
+							<button id="search_button" type="submit">검색</button>
+						</form>
+					</div>
+				</div>
+			</div>
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

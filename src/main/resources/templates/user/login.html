@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+	<link rel="stylesheet" href="css/login/login.css">
+	<link rel="stylesheet" href="css/repeat/header.css">
+	<link rel="stylesheet" href="css/repeat/footer.css">
+	<link rel="stylesheet" href="css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="content-wrap">
+
+			<div class="inner_login">
+				<div class="login_tistory">
+			
+					<form method="post" th:action="@{login}">
+						<fieldset>
+							<p class="login_title">로그인</p>
+						<div class="box_login">
+							<div class="inp_text">
+								<input type="email" id="loginId" name="username" placeholder="아이디 또는 이메일 입력" >
+								<input type="password" id="loginPw" name="password" placeholder="비밀번호" >
+							</div>
+						</div>
+						<div class="login_append">
+							<div class="inp_chk"> <!-- 체크시 checked 추가 -->
+								<input type="checkbox" class="inp_radio" name="_spring_security_remember_me">
+								<span class="txt_lab">로그인 상태 유지</span>
+							</div>
+							<span class="txt_find">
+								<a class="link_find" th:href="@{id_find}">아이디</a>
+								/
+								<a class="link_find" th:href="@{pw_find}">PW 찾기 ></a>
+							</span>
+						</div>
+						<div class="login_join">
+							<button type="submit" class="btn_login">로그인</button>
+							<button type="button" class="btn_join" th:href="@{join}">회원가입</button>
+						</div>
+						
+						</fieldset>
+					</form>
+					
+				</div>
+			</div>
+			
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

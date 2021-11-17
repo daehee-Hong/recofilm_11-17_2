@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+    <link rel="stylesheet" href="/css/category/popular.css">
+	<link rel="stylesheet" href="/css/repeat/header.css">
+	<link rel="stylesheet" href="/css/repeat/footer.css">
+	<link rel="stylesheet" href="/css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="content-wrap">
+			<div class="content-container">
+
+			<div class="top_three">
+				<div class="top_three_wrap">
+					<div class="top_three_item">
+						<ul>
+							<li class="first"><img src="/img/category/1st.png"></li>
+							<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+							<li class="top_three_name">싱크홀</li>
+						</ul>
+					</div>
+					<div class="top_three_item">
+						<ul>
+							<li class="second"><img src="/img/category/2nd.png"></li>
+							<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+							<li class="top_three_name">싱크홀</li>
+						</ul>
+					</div>
+					<div class="top_three_item">
+						<ul>
+							<li class="third"><img src="/img/category/3rd.png"></li>
+							<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+							<li class="top_three_name">싱크홀</li>
+						</ul>
+					</div>
+
+					<div class="top_three_clear"></div>
+				</div>
+			</div>
+
+			<div class="similar">
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+						<li class="similar_item_name">싱크홀</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+						<li class="similar_item_name">싱크홀</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+						<li class="similar_item_name">싱크홀</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+						<li class="similar_item_name">싱크홀</li>
+					</ul>
+				</div>
+
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+						<li class="similar_item_name">싱크홀</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+						<li class="similar_item_name">싱크홀</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+						<li class="similar_item_name">싱크홀</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie006.png"></a></li>
+						<li class="similar_item_name">싱크홀</li>
+					</ul>
+				</div>
+
+				<div class="similar_clear"></div>
+			</div>
+		</div>
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

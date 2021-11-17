@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+    <link rel="stylesheet" href="/css/board/write.css">
+	<link rel="stylesheet" href="/css/repeat/header.css">
+	<link rel="stylesheet" href="/css/repeat/footer.css">
+	<link rel="stylesheet" href="/css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="content-wrap">
+			<div class="content-container">
+				<div class="manner_info">
+					<img src="/img/board/pouple.png" class="manner_logo">
+					<p class="manner_text">매너있는 소통으로 영화에 대한 생각를 공유하는 RECOFILM의 우리들의 이야기 게시판입니다.
+						<strong>영화와 관련된 자유로운 글들을 올려주세요!</strong></p>
+				</div>
+
+				<div class="write_header">
+					<p>커뮤니티 글쓰기</p>
+				</div>
+
+				<form method="post" th:action="@{write}" class="table_form" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<th>⦁ 분류</th>
+							<td>
+								<select name="write_type" id="select-box">
+									<option value="자유글" th:value="'[자유글]'">자유글</option>
+									<option value="공지사항" th:value="'[공지]'">공지사항</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>⦁ 제목</th><!--input안에 값은 th:value-->
+							<td><input type="text" name="title" maxlength="" value=""></td>
+						</tr>
+						<tr>
+							<th>⦁ 내용</th>
+							<td><textarea name="content" rows="20"></textarea></td>
+						</tr>
+					</table>
+					<div class="button_wrap">
+						<input type="button" class="btn_cancel" value="취소" onclick="history.back()">
+						<input type="submit" class="btn_submit" value="등록">
+					</div>
+				</form>
+			</div>
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<div id="header-wrap" xmlns:th="http://www.thymeleaf.org"
+	 th:fragment="header"
+	 xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <div class="header-container">
+		<div id="headerLogo_div">
+			<a href="./index.html"th:href="@{/}"><img id="headerLogo" src="/img/header_logo.png"></a>
+		</div><!--xmlns:sec="http://www.w3.org/1999/xhtml"-->
+    	<ul id="login">
+			<li><a sec:authorize="isAuthenticated()" th:href="@{logout}">  |  로그아웃</a></li>
+			<li sec:autuorize="isAuthenticated()">
+				<a th:href="@{dbpage}" sec:authorize="hasRole('ROLE_ADMIN')">관리자페이지</a>
+<!--				<span sec:authentication="">님</span>-->
+				<a th:text="${nickname}"></a>
+			</li>
+    		<li><a sec:authorize="isAnonymous()" th:href="@{join}">회원가입</a></li>
+    		<li><a sec:authorize="isAnonymous()" th:href="@{login}">로그인 |&nbsp;</a></li>
+   		 </ul>
+		<button type='button' id="modal_btn"><img src="/img/search_btn.png"></button>
+    </div>
+	<hr id="header-hr">
+</div>
+<div id="menu-wrap" th:fragment="menu">
+
+	<div class="menu-container">
+		<nav id="topMenu" >
+			<ul>
+				<li class="topMenuLi">
+					<a class="menuLink" th:href="@{recommend}">영화추천</a>
+				</li>
+				<li class="topMenuLi"> <a class="menuLink" th:href="@{rate}">카테고리</a>
+					<ul class="submenu">
+						<li><a href="" class="submenuLink" th:href="@{rate}">평점</a></li>
+						<li><a href="" class="submenuLink" th:href="@{now_playing}">상영중</a></li>
+						<li><a href="" class="submenuLink" th:href="@{upcoming}">개봉예정</a></li>
+						<li><a href="" class="submenuLink" th:href="@{popular}">인기</a></li>
+					</ul>
+				</li>
+				<li class="topMenuLi"> <a class="menuLink" href="#" th:href="@{recofilm_info}">recofilm소개</a> </li>
+				<li class="topMenuLi"> <a class="menuLink" href="#" th:href="@{board}">커뮤니티</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>

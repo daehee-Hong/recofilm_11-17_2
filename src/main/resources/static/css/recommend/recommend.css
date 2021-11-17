@@ -1,0 +1,76 @@
+/*기본*/
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c;
+  font-family: 맑은고딕, Malgun Gothic, dotum, gulim, sans-serif;
+}
+ul li {
+  list-style: none;
+}
+
+#wrap {
+  width: 100%;
+  height: 1000px;
+}
+#content-wrap {
+  width: 100%;
+}
+.content-container {
+  width: 90%;
+  overflow:hidden;
+  height:auto;
+  margin: 30px auto;
+  color: #fff;
+  margin-bottom: 200px;
+}
+
+/*콘텐츠*/
+.random_wrap {
+  width: max-content;
+  height: max-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 80px;
+}
+.random_wrap > ul > li {
+  text-align: center;
+}
+.first_li {
+  font-size: 43px;
+  color: #ffffff;
+  margin-bottom: 9px;
+  font-weight: bold;
+}
+.first_li > span {
+  font-size: 59px;
+  color: #a835c6;
+}
+.second_li {
+  font-size: 29px;
+  color: #ffffff;
+  margin-bottom: 64px;
+}
+.second_li > span {
+  color: #cc00ff;
+}
+.btn_run {
+  width: 199px;
+  height: 70px;
+  border-radius: 35px;
+  color: #ffffff;
+  background-color: #a835c6;
+  border: none;
+  margin-bottom: 39px;
+}
+.btn_run > a{
+  text-decoration: none;
+  color: #ffffff;
+  background: transparent;
+  font-size: 22px;
+}
+.last_li {
+  font-size: 20px;
+  color: #ffffff;
+}

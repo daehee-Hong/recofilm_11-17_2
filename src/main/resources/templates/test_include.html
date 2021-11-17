@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="ngTemplate">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS ngTemplate</title>
+
+    <!-- template1.html -->
+    <script type="text/ng-template" id="template1.html">
+        <h2>template1.html</h2>
+        Header Area
+    </script>
+
+    <!-- template2.html -->
+    <script type="text/ng-template" id="template2.html">
+        <h2>template2.html</h2>
+
+        Menu Area<br><br>
+        HTML<br>
+        CSS<br>
+        JavaScript
+    </script>
+
+    <!-- template3.html -->
+    <script type="text/ng-template" id="template3.html">
+        <h2>template3.html</h2>
+
+        Content Area
+    </script>
+
+    <!-- template4.html -->
+    <script type="text/ng-template" id="template4.html">
+        <h2>template4.html</h2>
+
+        Footer Area
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular.min.js"></script>
+    <script src="./js/includeHTML.js"></script>
+
+    <link rel="stylesheet" href="./css/test_include.css"/>
+
+</head>
+
+<body>
+    <div id="container"  ng-controller="MainCtrl">
+        <div id="header" ng-include src="templates[0].url"></div>
+        <div id="menu" ng-include src="templates[1].url"></div>
+        <div id="content" ng-include src="templates[2].url"></div>
+        <div id="footer" ng-include src="templates[3].url"></div>
+    </div>
+</body>
+
+</html>

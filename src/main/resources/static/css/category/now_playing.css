@@ -1,0 +1,124 @@
+/*기본*/
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c;
+  font-family: 맑은고딕, Malgun Gothic, dotum, gulim, sans-serif;
+}
+ul li {
+  list-style: none;
+}
+
+#wrap {
+  width: 100%;
+  height: 1000px;
+}
+#content-wrap {
+  width: 100%;
+}
+.content-container {
+  width: 90%;
+  overflow:hidden;
+  height:auto;
+  margin: 30px auto;
+  color: #fff;
+  margin-bottom: 200px;
+}
+
+/* 선택 */
+#select-wrap {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 255px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  font-size: 23px;
+  line-height: 43px;
+}
+.now_playing {
+  border-bottom: solid 3px #a835c6;
+  background-color: transparent;
+  width: 127px;
+  text-align: center;
+  float: left;
+}
+.now_playing > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.upcoming {
+  color: #8a8a8a;
+  border-bottom: solid 3px #ffffff;
+  background-color: transparent;
+  width: 127px;
+  text-align: center;
+  float: left;
+}
+.upcoming > a {
+  color: #8a8a8a;
+  text-decoration: none;
+}
+
+/*콘텐츠*/
+
+.similar_title {
+  font-size: 30px;
+  color: #ffffff;
+  position: relative;
+  top: 5%;
+  left: 7%;
+  transform: translate(0, 0);
+  width: 500px;
+  line-height: 50px;
+  margin: 30px 0 10px 0;
+}
+.result_num {
+  font-size: 35px;
+  color: #a92ce8;
+  margin-left: 10px;
+}
+.similar {
+  width: 1540px;
+  height: auto;
+  position: relative;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+ul li {
+  list-style: none;
+}
+.similar_item {
+  float: left;
+  text-align: center;
+  margin: 20px 0 0 35px;
+}
+.similar_item > ul > li > a > img {
+  width: 266px;
+  height: auto;
+  margin-bottom: -3px;
+  margin-top: -4px;
+}
+
+.similar_item_name {
+  font-size: 20px;
+  color: #a9a9a9;
+  background-color: #000000;
+  line-height: 44px;
+}
+.movie_vote {
+  font-size: 23px;
+  line-height: 31px;
+  color: #dadada;
+  margin-bottom: 80px;
+  margin-top: 5px;
+}
+.vote_star {
+  color: #d14b4b;
+}
+
+.similar_clear {
+  clear: both;
+}

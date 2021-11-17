@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'EliceDigitalBaeum_Regular';
+  src: url('font/EliceDigitalBaeumOTF_Regular.otf') format('truetype');
+}
+/*기본*/
+
+#header-wrap {
+  width: 100%;
+}
+#menu-wrap {
+  width: 100%;
+}
+
+.header-container {
+  width: 1400px;
+  height: 90px;
+  margin: 0 auto;
+}
+.menu-container {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/*header*/
+
+#headerLogo {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 49%;
+  top: 4%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 8px 0 0 20px;
+  width: 300px;
+}
+#login {
+  font-size: 20px;
+  list-style: none;
+}
+#login > li {
+  float: right;
+  text-align: right;
+  margin: 50px 0 0 0;
+  font-size: 20px;
+  list-style: none;
+}
+#login > li > a {
+  color: gray;
+  text-decoration: none;
+}
+#login > li > a > span {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header-hr {
+  margin: 0 180px 20px 180px;
+}
+
+/*메뉴*/
+
+#topMenu {
+  height: 40px;
+  width: 1200px; /* [변경] 하위 메뉴와 동일하게 맞춤 */
+}
+#topMenu ul {
+  /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+#topMenu ul li {
+  /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+  color: #fff;
+  float: left;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  font-family: 'EliceDigitalBaeum_Regular';
+}
+.menuLink {
+  /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+  text-decoration: none;
+  display: block;
+  width: 290px;
+  font-size: 30px;
+  color: white;
+  line-height: 60px;
+}
+.submenuLink {
+  /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  margin: 0 20px 0 20px;
+}
+.topMenuLi:hover .menuLink {
+  /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+  font-weight: bold;
+  border-bottom: solid 1px #fff;
+}
+.longLink {
+  /* 좀 더 긴 메뉴 스타일 설정 */
+  width: 140px;
+}
+.submenuLink {
+  /* 하위 메뉴의 a 태그 스타일 설정 */
+  color: #fff;
+}
+.submenu {
+  /* 하위 메뉴 스타일 설정 */
+  position: absolute;
+  margin-top: 1px;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.2s;
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  width: auto; /* [변경] 가로 드랍다운 메뉴의 넓이 */
+}
+.submenu li {
+  display: inline-block;
+}
+.topMenuLi:hover .submenu {
+  height: 40px;
+}
+.submenuLink:hover {
+  font-weight: bold;
+}

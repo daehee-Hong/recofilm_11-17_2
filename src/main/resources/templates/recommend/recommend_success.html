@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+    <link rel="stylesheet" href="/css/recommend/recommend_success.css">
+	<link rel="stylesheet" href="/css/repeat/header.css">
+	<link rel="stylesheet" href="/css/repeat/footer.css">
+	<link rel="stylesheet" href="/css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="content-wrap">
+			<div class="content-container">
+				<div class="random_wrap">
+					<ul>
+						<li class="img_li"><a th:href="@{detail(id=${movieID})}"><img src="/img/movie002.jpg" th:src="${poster_path}"></a></li>
+						<li class="img_name" th:text="${title}">캔디맨</li>
+
+						<li class="first_li">오늘 이런 영화는 어떠세요?</li>
+						<li class="second_li"><span class="pouple">reco</span><span class="white">film</span>이 추천하는 영화입니다!</li>
+						<li><button class="btn_run"><a th:href="@{recommend_success}">다시 돌리기</a></button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

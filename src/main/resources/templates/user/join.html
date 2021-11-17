@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+	<link rel="stylesheet" href="css/login/join.css">
+	<link rel="stylesheet" href="css/repeat/header.css">
+	<link rel="stylesheet" href="css/repeat/footer.css">
+	<link rel="stylesheet" href="css/repeat/popup_search.css">
+	<script src="js/password_check.js"></script>
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="content-wrap">
+
+			<div class="inner_login">
+				<div class="login_tistory">
+			
+					<form method="post" id="authForm" th:action="@{join}">
+						<fieldset>
+							<p class="login_title">회원가입</p>
+						<div class="box_login">
+							<div class="inp_text">
+								<p class="login_subTitle">아이디</p>
+								<input type="email" id="loginId" name="username" placeholder="아이디 또는 이메일 입력" >
+
+								<p class="login_subTitle">비밀번호</p>
+								<input type="password" id="pw" onchange="check_pw()" placeholder="비밀번호 (8~20자리 영문, 숫자 조합)" name="password">
+								<div id="check"></div>
+								<input type="password" id="pw2" onchange="check_pw()" placeholder="비밀번호 재입력" >
+								<div id="check2"></div>
+
+								<p class="login_subTitle">닉네임</p>
+								<input type="text" placeholder="닉네임 입력" name="nickname">
+								<p class="login_subTitle">전화번호</p>
+								<input type="tel" placeholder="전화번호" name="telnumber">
+							</div>
+						</div>
+						<div class="login_join">
+							<button type="submit" class="btn_login" id="btn_login" disabled="disabled">가입하기</button>
+							<button type="button" class="btn_join" th:href="@{/}">취소</button>
+						</div>
+						
+						</fieldset>
+					</form>
+					
+				</div>
+			</div>
+			
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

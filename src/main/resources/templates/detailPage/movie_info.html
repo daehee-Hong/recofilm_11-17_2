@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+	<link rel="stylesheet" href="/css/movie_info.css">
+	<link rel="stylesheet" href="/css/repeat/header.css">
+	<link rel="stylesheet" href="/css/repeat/footer.css">
+	<link rel="stylesheet" href="/css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="content-wrap">
+			<div class="content-container">
+			<div class="movie_info_content">
+				<img class="movie_info_poster" src="img/movie009.jpg" th:src="${movieDetail.poster_path}">
+				<div class="movie_information">
+					<div class="movie_name" th:text="${movieDetail.title}">존윅 3: 파라블럼</div>
+
+					<span class="movie_genre" th:text="${movieDetail.genre}">#액션 #스릴러</span>
+					<span class="movie_playtime" th:text="${movieDetail.runtime} + 분">● 131분</span>
+					<span class="movie_vote" th:text="${movieDetail.vote_average}"><span class="vote_star">★</span>9.1</span>
+
+					<div class="movie_upcoming_date">
+						<span class="upcoming_title" >개봉일 </span>
+						<span class="upcoming_date" th:text="${movieDetail.release_date}"> 2019.6.26</span>
+					</div>
+
+					<div class="movie_storyLine_title">줄거리</div>
+					<div class="movie_storyLine" th:text="${movieDetail.overview}">
+						평화를 원한다면 전쟁을 준비하라! 현상금 1,400만 달러!,
+						전 세계 킬러들이 노리는 단 하나의 타깃 업계 레전드 킬러
+						‘존 윅’은 국제암살자연합을 통해 파문조치를 당한 후 그에게
+						따라 붙은 역대 최고의 현상금 1,400만 불로 인해전 세계의
+						가장 위협적인 킬러들이 그와의 전쟁을 선포한다
+					</div>
+				</div>
+			</div>
+			<p class="similar_title">비슷한 영화</p>
+			<div class="similar">
+				<div class="similar_item" th:if="${i.count <= 5}" th:each="similarList, i : ${similarList}">
+					<ul>
+						<li><a th:href="@{detail(id=${similarList.id})}"><img src="./img/movie012.jpg" th:src="${similarList.poster_path}"></a></li>
+						<li class="similar_item_name" th:text="${similarList.title}">윈드리버</li>
+					</ul>
+				</div>
+
+				<div class="similar_clear"></div>
+			</div>
+		</div>
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

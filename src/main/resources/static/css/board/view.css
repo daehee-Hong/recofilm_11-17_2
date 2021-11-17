@@ -1,0 +1,104 @@
+/*기본*/
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c;
+  font-family: 맑은고딕, Malgun Gothic, dotum, gulim, sans-serif;
+}
+ul li {
+  list-style: none;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#wrap {
+  width: 100%;
+  height: 1000px;
+}
+#content-wrap {
+  width: 100%;
+}
+.content-container {
+  width: 90%;
+  overflow:hidden;
+  height:auto;
+  margin: 30px auto;
+  color: #fff;
+}
+
+/*콘텐츠*/
+
+/*콘텐츠 해더*/
+.view_header {
+  width: 1220px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: solid #ffffff 2px;
+  margin-bottom: 20px;
+}
+.title {
+  height: 46px;
+  font-size: 35px;
+  margin: 0 0 16px 32px;
+}
+.title > span {
+  font-size: 26px;
+  line-height: 46px;
+  color: #a835c6;
+}
+.regtime_hits {
+  margin: 0 0 20px 48px;
+  color: #bebebe;
+  font-size: 17px;
+}
+
+/*테이블 내용*/
+.view_content {
+  width: 1200px;
+  min-height: 600px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: solid 2px #ffffff;
+}
+.view_content_td {
+  min-height: 700px;
+  width: 1220px;
+  text-align: left;
+  vertical-align: top;
+}
+.view_content_td > img {
+  max-width: 1220px;
+  margin-bottom: 10px;
+}
+
+/*컨트롤 버튼*/
+.control_btn_wrap {
+  float: right;
+  margin: 10px 280px 200px 0;
+}
+.control_btn_wrap > button {
+  font-size: 17px;
+  line-height: 30px;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+}
+.control_btn_wrap > button > a {
+  background: transparent;
+}
+.btn_rewrite {
+  background-color: #a835c6;
+  color: #ffffff;
+  border: solid 1px #a835c6;
+}
+.btn_delete {
+  border: solid 1px #a835c6;
+}
+.btn_delete > a {
+  color: #a835c6;
+}

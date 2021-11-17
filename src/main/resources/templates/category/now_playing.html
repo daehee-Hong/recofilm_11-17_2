@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+    <link rel="stylesheet" href="/css/category/now_playing.css">
+	<link rel="stylesheet" href="/css/repeat/header.css">
+	<link rel="stylesheet" href="/css/repeat/footer.css">
+	<link rel="stylesheet" href="/css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+		<div id="select-wrap">
+			<div class="now_playing"><a th:href="@{now_playing}">상영중</a></div>
+			<div class="upcoming"><a th:href="@{upcoming}">개봉예정</a></div>
+		</div>
+
+        <div id="content-wrap">
+			<div class="content-container">
+			<div class="similar">
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+				<div class="similar_item">
+					<ul>
+						<li><a th:href="@{movie_info}"><img src="./img/movie012.jpg"></a></li>
+						<li class="similar_item_name">윈드리버</li>
+						<li class="movie_vote"><span class="vote_star">★ </span>9.1</li>
+					</ul>
+				</div>
+
+				<div class="similar_clear"></div>
+			</div>
+		</div>
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

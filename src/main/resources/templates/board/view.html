@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+    <link rel="stylesheet" href="/css/board/view.css">
+	<link rel="stylesheet" href="/css/repeat/header.css">
+	<link rel="stylesheet" href="/css/repeat/footer.css">
+	<link rel="stylesheet" href="/css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="content-wrap">
+			<div class="content-container">
+				<div class="view_header">
+					<div class="title" th:text="${post.title}">
+						<span id="view_title" th:text="${post.write_type}">[자유글]</span>
+						영화 추천합니다~!</div>
+					<div class="regtime_hits">
+						<span id="regtime" th:text="${#temporals.format(post.date, 'yyyy-MM-dd HH:mm')}">2021-01-01</span>
+						<span id="hits" th:text="${post.view_count + ' 조회수'}">조회 <span id="hits_num">120</span></span>
+					</div>
+				</div>
+
+				<table class="view_content">
+					<tr>
+						<td class="view_content_td">
+							<img src="/img/category/viewSample.png">
+							<p th:text="${post.content}">
+								이영화 정말 재미있습니다. 킬링타임용으로 좋아요.
+							</p>
+						</td>
+					</tr>
+				</table>
+				<div class="control_btn_wrap">
+					<button class="btn_delete"><a th:href="@{delete(num=${post.num})}">삭제</a></button>
+					<button class="btn_rewrite"><a th:href="@{edit(num=${post.num})}">수정</a></button>
+				</div>
+			</div>
+        </div>
+		<div th:replace="repeat/footer.html :: footer"></div>
+    </div>
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="./css/slide_json.css"/>
+	<link rel="stylesheet" href="css/popup_serch.css">
+
+	<script src="/static/js/includeHTML.js"></script>
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">   
+		$(document).ready( function() {
+		
+		$("#headers").load("./repeat/header.html");
+		$("#footer").load("./repeat/footer.html");
+		$("#popup_serch").load("./repeat/popup_serch.html");
+		});
+	</script>
+</head>
+<body>
+	<div id="header"></div>
+
+    <div id="wrap">
+		<div id="headers"></div>
+
+        <div id="banner-wrap">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide"><img src="./img/slide000.jpg"></div>
+				  <div class="swiper-slide"><img src="./img/slide001.jpg"></div>
+				  <div class="swiper-slide"><img src="./img/slide002.jpg"></div>
+				  <div class="swiper-slide"><img src="./img/slide003.jpg"></div>
+				  <div class="swiper-slide"><img src="./img/slide004.jpg"></div>
+				  <div class="swiper-slide"><img src="./img/slide005.jpg"></div>
+				  <div class="swiper-slide"><img src="./img/slide006.jpg"></div>
+				  <div class="swiper-slide"><img src="./img/slide007.jpg"></div>
+				  <div class="swiper-slide"><img src="./img/slide008.jpg"></div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<!-- Swiper JS -->
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+			<!-- Initialize Swiper -->
+			<script src="./js/slide.js"></script>
+        </div>
+		
+        <div id="content-wrap">
+            <div class="content-container">
+            	<h2>뜨끈뜨끈한 <span style="color:red">HOT!</span>한 영화</h2>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie007.jpg"></li>
+						<li class="content_item_name">존윅</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie008.jpg"></li>
+						<li class="content_item_name">존윅2</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie009.jpg"></li>
+						<li class="content_item_name">존윅3</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie003.jpg"></li>
+						<li class="content_item_name">디스트릭트666</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie004.jpg"></li>
+						<li class="content_item_name">트리거포인트</li>
+					</ul>
+				</div>
+
+				<div class="content_clear"></div>
+
+				<h2>몰입감 굿! 국내영화</h2>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie000.jpg"></li>
+						<li class="content_item_name">지하실</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie005.jpg"></li>
+						<li class="content_item_name">쇼미더고스트</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie006.png"></li>
+						<li class="content_item_name">싱크홀</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie014.jpg"></li>
+						<li class="content_item_name">마녀</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie013.jpg"></li>
+						<li class="content_item_name">간첩</li>
+					</ul>
+				</div>
+
+				<div class="content_clear"></div>
+
+				<h2>주인공이 매력적인 영화</h2>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie001.jpg"></li>
+						<li class="content_item_name">프리가이</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie002.jpg"></li>
+						<li class="content_item_name">캔디맨</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie011.jpg"></li>
+						<li class="content_item_name">그린존</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie012.jpg"></li>
+						<li class="content_item_name">윈드리버</li>
+					</ul>
+				</div>
+				<div class="content_item">
+					<ul>
+						<li><img src="./img/movie003.jpg"></li>
+						<li class="content_item_name">디스트릭트666</li>
+					</ul>
+				</div>
+            </div>
+        </div>
+
+		<div id="footer"></div>
+		
+    </div>
+
+	<div id="popup_serch"></div>
+
+</body>
+</html>

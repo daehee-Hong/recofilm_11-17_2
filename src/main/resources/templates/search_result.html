@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+	<link rel="stylesheet" href="/css/search_result.css">
+	<link rel="stylesheet" href="/css/repeat/header.css">
+	<link rel="stylesheet" href="/css/repeat/footer.css">
+	<link rel="stylesheet" href="/css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+		<div id="search-wrap">
+			<div class="search_content">
+				<div class="search_content_wrap">
+					<form th:action="@{search_result}" accept-charset="utf-8" method = "get">
+						<button type="submit"><img src="./img/search.png"></button>
+						<input type="text" placeholder="검색어 입력" name="keyword">
+					</form>
+				</div>
+			</div>
+		</div>
+
+        <div id="content-wrap">
+			<div class="content-container">
+			<p class="similar_title">검색결과<span class="result_num">5</span></p>
+			<div class="similar">
+				<div class="similar_item" th:if="${i.count <= 5}" th:each="searchResult, i : ${searchResult}">
+					<ul>
+						<li><a th:href="@{detail(id=${searchResult.id})}"><img src="./img/movie012.jpg" th:src="${searchResult.poster_path}"></a></li>
+						<li class="similar_item_name" th:text="${searchResult.title}">윈드리버</li>
+					</ul>
+				</div>
+				<div class="similar_clear"></div>
+			</div>
+		</div>
+        </div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>

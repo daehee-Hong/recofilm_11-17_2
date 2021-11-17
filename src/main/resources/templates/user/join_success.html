@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>recofilm</title>
+
+    <link rel="stylesheet" href="css/login/join_success.css">
+	<link rel="stylesheet" href="css/repeat/header.css">
+	<link rel="stylesheet" href="css/repeat/footer.css">
+	<link rel="stylesheet" href="css/repeat/popup_search.css">
+</head>
+<body>
+    <div id="wrap">
+		<div th:replace="repeat/header.html :: header"></div>
+		<div th:replace="repeat/header.html :: menu"></div>
+
+        <div id="content-wrap">
+			<div class="content-container">
+				<div class="random_wrap">
+					<ul>
+						<li class="first_li"><img src="/img/login/pouple_check.png"></li>
+						<li class="second_li">회원가입이 완료 되었습니다!</li>
+						<li class="third_li">이제 recofilm에서 더 다양한 영화정보를 찾아보세요!</li>
+						<li><button class="btn_run"><a th:href="@{/}">확인</a></button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div th:replace="repeat/footer.html :: footer"></div>
+
+    </div>
+
+	<div th:replace="repeat/popup_search.html :: popup_search"></div>
+	<script src="./js/popup_search.js"></script>
+</body>
+</html>
